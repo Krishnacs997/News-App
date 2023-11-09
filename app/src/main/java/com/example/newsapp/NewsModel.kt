@@ -1,13 +1,19 @@
 package com.example.newsapp
 
-data class NewsModel(
+import java.io.Serializable
+
+data class newsResult(
+    var totalResults: Int,
+    var articles: ArrayList<NewsArrayModel>
+): Serializable
+data class NewsArrayModel(
     var author: String,
     var title: String,
     var description: String,
     var url: String,
     var urlToImage: String,
     var content: String
-)
+): Serializable
 
 data class JocksDataModel(
     var categoories:ArrayList<String>,
@@ -17,4 +23,4 @@ data class JocksDataModel(
     var updated_at:String,
     var url:String,
     var value:String
-):java.io.Serializable
+): Serializable

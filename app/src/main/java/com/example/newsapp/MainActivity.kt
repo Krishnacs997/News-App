@@ -1,6 +1,7 @@
 package com.example.newsapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,9 +21,16 @@ lateinit var binding: ActivityMainBinding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.buttonNews.setOnClickListener{
+        binding.buttonJocks.setOnClickListener{
             ApiCall().getJokese(this){ it1 ->
+                Log.d("Joke API Responce", it1.toString())
                 binding.textViewJ.text = it1.value
+            }
+        }
+
+        binding.buttonGetNews.setOnClickListener{
+            ApiCall().getNews(this){it2 ->
+                Log.d("News API Responce", it2.toString())
             }
         }
     }

@@ -7,14 +7,31 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonNews"
+        android:id="@+id/buttonJocks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="News List"
+        android:text="Get Latest Jocks"
         android:textSize="16sp"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/purple_700"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/buttonGetNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Latest today News"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_below="@+id/buttonJocks"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@color/purple_700"
         android:gravity="center"/>
 
@@ -24,8 +41,9 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:gravity="center"
+        android:layout_marginTop="50dp"
         android:padding="10dp"
-        android:layout_below="@+id/buttonNews"
+        android:layout_below="@+id/buttonGetNews"
         android:textColor="@color/black"/>
 
 </RelativeLayout>
