@@ -3,6 +3,7 @@ package com.example.newsapp
 import java.io.Serializable
 
 data class newsResult(
+    var status: String,
     var totalResults: Int,
     var articles: ArrayList<NewsArrayModel>
 ): Serializable

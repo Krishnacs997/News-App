@@ -13,5 +13,6 @@ class NewsListActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
     }
 }
